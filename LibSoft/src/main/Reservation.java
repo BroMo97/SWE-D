@@ -15,16 +15,4 @@ public class Reservation {
         this.reservationDate = new Timestamp(System.currentTimeMillis());
     }
 
-	
-	void takeRentalStatus() {
-		
-	}
-	
-	void createReservationID() {
-		
-	}
-	
-	void setReservationDate(Timestamp reservationDate) {
-		this.reservationDate = reservationDate;
-	}
 }

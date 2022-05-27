@@ -14,7 +14,6 @@ public class Title {
 	int pageNumbers;
 	String overview;
 	String edition;
-	Date dateOfListing;
 	
 	Title(String bookname, long isbn, String publisher, Date publicationDate, CopyLanguage language, Person author){
 		this.bookname = bookname;
