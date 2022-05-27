@@ -1,16 +1,16 @@
 package main;
 
 public class RentalManagement {
-	boolean rentBook(Lender lender, Copy copy) {
-		return false;
+	void rentBook(Lender lender, Copy copy) {
+		
 	}
 	
 	void returnBook(Copy copy) {
 		
 	}
 	
-	boolean reserveBook(String a, String b) {
-		return false;
+	void reserveBook(String a, String b) {
+		
 	}
 	
 	boolean checkAvailability() {

@@ -10,4 +10,15 @@ public class Reservation {
 	long reservationID;
 	int lenderID;
 	
+	void takeRentalStatus() {
+		
+	}
+	
+	void createReservationID() {
+		
+	}
+	
+	void setReservationDate(Timestamp reservationDate) {
+		this.reservationDate = reservationDate;
+	}
 }

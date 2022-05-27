@@ -1,8 +1,8 @@
 package main;
 
 public class Catalouge {
-	boolean createBook(Title title) {
-		return false;
+	void createBook(Title title) {
+		
 	}
 	
 	boolean checkISBN(String isbn) {

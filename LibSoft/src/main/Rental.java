@@ -8,11 +8,11 @@ public class Rental {
 	Date dueDate;
 	int extensionCounter;
 	
-	boolean deleteCopy() {
-		return false;
+	void deleteCopy() {
+		
 	}
 	
-	boolean updateRentalStatus() {
-		return false;
+	void updateRentalStatus() {
+		
 	}
 }
