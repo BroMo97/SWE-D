@@ -4,9 +4,9 @@ import java.util.Date;
 
 public class Title {
 	String bookname;
-	String isbn;
+	long isbn;
 	String publisher;
-	String author;
+	Person author;
 	Date publicationDate;
 	String placeOfPublication;
 	CopyGenre genre;
@@ -16,7 +16,13 @@ public class Title {
 	String edition;
 	Date dateOfListing;
 	
-	boolean createBibTeX() {
-		return false;
+	Title(String bookname, long isbn, String publisher, Date publicationDate, CopyLanguage language, Person author){
+		this.bookname = bookname;
+		this.isbn = isbn;
+		this.publisher = publisher;
+		this.publicationDate = publicationDate;
+		this.language = language;
+		this.author = author;
 	}
+	
 }
