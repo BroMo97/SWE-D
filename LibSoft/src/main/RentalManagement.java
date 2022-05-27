@@ -13,7 +13,7 @@ public class RentalManagement {
 		
 	}
 	
-	boolean checkAvailability() {
-		return false;
+	void checkAvailability(Copy copy) {
+		System.out.println(copy.status);
 	}
 }

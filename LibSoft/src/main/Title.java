@@ -11,7 +11,6 @@ public class Title {
 	String placeOfPublication;
 	CopyGenre genre;
 	CopyLanguage language;
-	CopyFormat format;
 	int pageNumbers;
 	String overview;
 	String edition;

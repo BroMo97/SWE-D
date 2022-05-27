@@ -9,7 +9,7 @@ public class Catalouge {
 		return false;
 	}
 	
-	boolean searchBook(String title) {
-		return false;
+	void searchBook(String title) {
+		System.out.println("Mathe");
 	}
 }
