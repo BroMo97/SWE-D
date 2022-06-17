@@ -18,7 +18,7 @@ public class UserManagement {
 		persons.add(newPerson);
 	}
 	
-	void createLender(String firstName, String lastName, Date birthday, String email) {
+	Lender createLender(String firstName, String lastName, Date birthday, String email) {
 		for(Person p : persons) {
 			if(firstName.equals(p.firstName) && lastName.equals(p.lastName) && birthday.equals(p.birthday)) {
 				System.out.println("Person already exists!");
@@ -27,6 +27,7 @@ public class UserManagement {
 		}
 		Lender newLender = new Lender(firstName, lastName, birthday, email);
 		persons.add(newLender);
+		return newLender;
 	}
 	
 	void deactiveLender(int id) {

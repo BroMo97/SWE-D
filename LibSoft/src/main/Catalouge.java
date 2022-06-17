@@ -10,7 +10,7 @@ public class Catalouge {
 	public HashSet<Title> titles = new HashSet<>();
 	public HashSet<Copy> copies = new HashSet<>();
 	
-	void createBook(String bookname, long isbn, String publisher, Date publicationDate, CopyLanguage language, Person author) {
+	Title createBook(String bookname, long isbn, String publisher, Date publicationDate, CopyLanguage language, Person author) {
 		for(Title current : titles) {
 			if(current.isbn == isbn) {
 				System.out.println("Book already exists!");
@@ -19,6 +19,7 @@ public class Catalouge {
 		}
 		Title newBook = new Title(bookname, isbn, publisher, publicationDate, language, author);
 		titles.add(newBook);
+		return newBook;
 	}
 	
 	void removeBook(long isbn) {
