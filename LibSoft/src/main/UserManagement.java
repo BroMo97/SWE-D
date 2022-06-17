@@ -36,4 +36,22 @@ public class UserManagement {
 			}
 		}
 	}
+	
+	boolean authenticateUser(String email, String password) {
+		for(Lender l : lenders) {
+			if(l.eMail != email && l.password != password) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	String remindUser(int id) {
+		for(Lender l : lenders) {
+			if(l.id == id) {
+				return l.eMail;
+			}
+		}
+		return null;
+	}
 }

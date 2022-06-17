@@ -18,6 +18,15 @@ public class RentalManagement {
 			}
 		}
 	}
+		
+	void extendRental(int id) {
+		for(Rental r : rentals) {
+			if(r.id == id) {
+				r.extensionCounter++;
+			}
+			System.out.println("Doesn't exist!");
+		}
+	}
 	
 	Rental returnBook(int rentalId) {
 		for(Rental r : rentals) {

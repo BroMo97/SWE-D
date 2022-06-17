@@ -24,4 +24,14 @@ public class Title {
 		this.author = author;
 	}
 	
+	void checkBookAvailability(Copy copy) {
+		CopyStatus available = CopyStatus.Available;
+		if(available == copy.status) {
+			System.out.println("Available!");
+		}
+		else {
+			System.out.println("Not Available!");
+		}
+	}
+	
 }

@@ -8,6 +8,7 @@ import java.util.HashSet;
 
 public class Catalouge {
 	public HashSet<Title> titles = new HashSet<>();
+	public HashSet<Copy> copies = new HashSet<>();
 	
 	void createBook(String bookname, long isbn, String publisher, Date publicationDate, CopyLanguage language, Person author) {
 		for(Title current : titles) {
@@ -18,6 +19,17 @@ public class Catalouge {
 		}
 		Title newBook = new Title(bookname, isbn, publisher, publicationDate, language, author);
 		titles.add(newBook);
+	}
+	
+	void removeBook(long isbn) {
+		for(Title current : titles) {
+			if(current.isbn != isbn) {
+				System.out.println("Book doesn't exist!");
+			}
+			else {
+				titles.remove(current);
+			}
+		}
 	}
 	
 	boolean checkISBN(long isbn) {
@@ -63,5 +75,32 @@ public class Catalouge {
 	
 	void searchBook(String title) {
 		System.out.println("Mathe");
+	}
+	
+	void findBookLocation(int id) {
+		for(Copy c : copies) {
+			if(c.copyId == id) {
+				System.out.println(c.location);
+			}
+			else {
+				System.out.println("Doesn't exist!");
+			}
+		}
+	}
+	
+	void openOnlineLocation(int id) {
+		for(Copy c : copies) {
+			if(c.copyId == id) {
+				if(c.format == CopyFormat.ePub || c.format == CopyFormat.PDF) {
+					System.out.println(c.location);
+				}
+				else {
+					System.out.println("Not online!");
+				}
+			}
+			else {
+				System.out.println("Doesn't exist!");
+			}
+		}
 	}
 }
