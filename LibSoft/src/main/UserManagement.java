@@ -39,7 +39,7 @@ public class UserManagement {
 	
 	boolean authenticateUser(String email, String password) {
 		for(Lender l : lenders) {
-			if(l.eMail != email && l.password != password) {
+			if(l.eMail != email || l.password != password) {
 				return false;
 			}
 		}
