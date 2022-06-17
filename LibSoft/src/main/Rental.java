@@ -38,4 +38,15 @@ public class Rental {
 			}
 		}
 	}
+	
+	void extendRental(int id) {
+		RentalManagement rental = new RentalManagement();
+		
+		for(Rental r : rental.rentals) {
+			if(r.id == id) {
+				r.extensionCounter++;
+			}
+		}
+		System.out.println("Doesn't exist!");
+	}
 }

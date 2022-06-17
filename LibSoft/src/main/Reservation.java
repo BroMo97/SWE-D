@@ -19,7 +19,10 @@ public class Reservation {
 	void reserveBook(int titleId, int userId, HashSet<Lender> lenders) {
 		UserManagement users = new UserManagement();
 		Catalouge copies = new Catalouge();
-		for(Lender l : users.lenders) {
+		
+		lenders = users.lenders;
+		
+		for(Lender l : lenders) {
 			if(userId == l.id) {
 				if(l.active) {
 					for(Copy c : copies.copies) {
